@@ -1,0 +1,8 @@
+[package]
+name = "sauna-vs-gym-cost"
+version = "0.1.0"
+edition = "2021"
+description = "Cost-per-session math for home recovery gear: amortized cost of a sauna or cold plunge session, break-even sessions against a gym membership, and the electricity line most buyers skip."
+license = "MIT"
+homepage = "https://hackedself.com"
+repository = "https://github.com/scrapertweeter3-prog/sauna-vs-gym-cost"
