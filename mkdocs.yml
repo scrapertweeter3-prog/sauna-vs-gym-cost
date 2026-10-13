@@ -1,0 +1,6 @@
+site_name: sauna-vs-gym-cost
+site_description: Cost-per-session math for home saunas and cold plunges against paying per visit.
+repo_url: https://github.com/scrapertweeter3-prog/sauna-vs-gym-cost
+repo_name: scrapertweeter3-prog/sauna-vs-gym-cost
+nav:
+  - Home: index.md
