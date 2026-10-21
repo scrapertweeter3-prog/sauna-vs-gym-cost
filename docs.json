@@ -1,0 +1,16 @@
+{
+  "$schema": "https://docs.page/schema.json",
+  "name": "sauna-vs-gym-cost",
+  "description": "A terminal calculator for the purchase most people price by sticker and judge by vibe: a home sauna or cold plunge turned into a dollars-per- session ",
+  "sidebar": [
+    {
+      "group": "Guide",
+      "pages": [
+        {
+          "title": "Overview",
+          "href": "/"
+        }
+      ]
+    }
+  ]
+}
