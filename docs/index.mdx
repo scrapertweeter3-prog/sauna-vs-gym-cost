@@ -1,0 +1,76 @@
+---
+title: Sauna-vs-gym-cost - when a home sauna beats paying per visit
+description: A terminal calculator for the purchase most people price by sticker and judge by vibe: a home sauna or cold plunge turned into a dollars-per- session 
+---
+
+# Sauna-vs-gym-cost - when a home sauna beats paying per visit
+
+A terminal calculator for the purchase most people price by sticker and
+judge by vibe: a home sauna or cold plunge turned into a dollars-per-
+session number. It amortizes the gear over the sessions you actually
+take, adds the electricity line most buyers skip, and prints the visit
+count where the gear finally beats paying per visit elsewhere.
+
+Python 3.8+, standard library only. No install, no network, nothing
+leaves your machine.
+
+## The method
+
+- **Utility cost** = kilowatt-hours per session x your electric rate.
+  A 2 kWh sauna sit at 17 cents is 34 cents; the tool keeps the units
+  honest so a spec-sheet kWh number and a bill-grade rate meet correctly.
+- **Annual sessions** = per-week habit x 52. The honest denominator,
+  because amortization lives or dies on how often the thing gets used.
+- **Session cost** = gear price / total sessions + utility line. Ten
+  sessions into a $2,500 unit is still $251 a sit; session 1,000 is
+  under four dollars.
+- **Break-even** = gear price / (per-visit alternative - your utility
+  line). When the alternative costs less than the electricity alone,
+  the gap is negative and usage never closes it, so the tool says so
+  instead of printing a number that looks like a win.
+
+## Usage
+
+```
+$ python3 saunacost.py --gear 2500 --week 4 --kwh 2.0 --rate 0.17 \
+    --alt 22 --months 36
+Sessions/week                        4
+Annual sessions                    208
+Sessions in window                 626
+Utility/session                 $0.34
+Amortized cost/session          $4.34
+Break-even vs $22/visit         115 visits
+```
+
+Compare two usage habits head to head:
+
+```
+$ python3 saunacost.py --compare 2 5
+at 2 sessions/week  -> $8.33/session at month 36
+at 5 sessions/week  -> $3.54/session at month 36
+5 sessions/week wins, saves $4.79/session
+```
+
+`--json` for machine output.
+
+## Honest limits
+
+The tool treats the electric rate as flat, ignores install and
+electrical-work costs, and assumes the per-visit alternative is a real
+option you would otherwise pay for. The cost-per-session habit of
+checking a gear purchase against your own usage log is where this fits;
+the amortized number is only as honest as the sessions counter.
+
+## Related
+
+The cost-per-session teardown this math follows:
+[hackedself.com](https://hackedself.com/recovery/home-recovery-lab-cost-per-session/)
+Why the habit side of the equation decides it:
+[hackedself.com](https://hackedself.com/recovery/sauna-cardiovascular-protocol/)
+Strength work the same amortization logic applies to:
+[hackedself.com](https://hackedself.com/fitness/strength-training-longevity-protocol/)
+More evidence-first biohacking: [hackedself.com](https://hackedself.com/)
+
+## License
+
+MIT
