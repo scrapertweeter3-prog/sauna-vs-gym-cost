@@ -1,0 +1,8 @@
+{
+  "name": "sauna-vs-gym-cost",
+  "version": "0.1.0",
+  "description": "Sauna vs gym cost math: amortized home recovery sessions with the utility line included, and the visit count where a home unit beats a per-visit alternative",
+  "license": "MIT",
+  "repository": "https://github.com/scrapertweeter3-prog/sauna-vs-gym-cost",
+  "homepage": "https://hackedself.com"
+}
